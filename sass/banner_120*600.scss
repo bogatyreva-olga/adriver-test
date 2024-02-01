@@ -30,10 +30,30 @@
 
   .card {
     gap: 15px;
+    position: relative;
   }
 
   .card__title {
-    display: none;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 35px;
+    line-height: 9px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.55s opacity, 0.55s visibility;
+  }
+
+  .card__images:hover +.card__info-product > .card__title {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .card__text {
+    font-size: 8px;
   }
 
   .card .price span:first-child {
