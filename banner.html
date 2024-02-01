@@ -2,36 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Banner</title>
     <script type="module" src="./js/main.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="build/css/style.css">
 </head>
 <body>
-<div class="content">
-    <div class="banner">
-        <div class="banner__logo">
-            <div class="banner__logo-wrap"></div>
-            <div class="banner__content"></div>
-        </div>
-    </div>
-    <template id="card">
-        <div class="card">
-            <div class="card__images">
-                <div>
-                    <img src="image/1.jpg" alt="dress"/>
+<div class="banner">
+    <div class="banner-wrap">
+            <div class="banner__popup-info">
+                <button class="banner__button-popup">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#816D5E"
+                         class="bi bi-info-circle"
+                         viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="banner__logo">
+                <div class="banner__logo-wrap">
+                    <img src="./icons/logo.svg" alt="">
                 </div>
             </div>
-            <div class="card__info-product">
-                <div class="card__title">
-                    <span class="card__text">Название товара</span>
-                </div>
-                <div class="card__price">
-                    <div class="price"><span>450</span><span class="card__price-symbol">₽</span></div>
-                </div>
-                <button class="card__basket"><span>Купить</span></button>
+            <div class="banner__content">
             </div>
+            <template id="card">
+                <div class="card">
+                    <div class="card__images">
+                        <div>
+                            <img src="image/1.jpg" alt="dress"/>
+                        </div>
+                    </div>
+                    <div class="card__info-product">
+                        <div class="card__title">
+                            <span class="card__text">Название товара</span>
+                        </div>
+                        <div class="card__info-footer">
+                            <div class="card__price">
+                                <div class="price"><span>450</span><span class="card__price-symbol">p.</span></div>
+                            </div>
+                            <button class="card__basket"><span>Купить</span></button>
+                        </div>
+                    </div>
+                </div>
+            </template>
         </div>
-    </template>
 </div>
 </body>
 </html>

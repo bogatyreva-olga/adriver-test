@@ -1,0 +1,99 @@
+$mainColor: #816D5E;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.content__wrapper {
+  display: flex;
+  gap: 50px;
+}
+
+button {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.banner {
+  font-family: 'Rubik', sans-serif;
+  color: $mainColor;
+  font-weight: bold;
+  margin: 5px;
+  border: 0.75px solid #2d2d2d;
+}
+
+.banner-wrap {
+  width: 100%;
+}
+
+.banner__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px;
+}
+
+.banner__logo {
+  margin: 20px auto;
+}
+
+.banner__popup-info {
+  position: relative;
+  height: 1px;
+}
+
+.banner__button-popup {
+  position: absolute;
+  top: -20;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  border: none;
+  background: url("icons/info-circle.svg"), no-repeat, center, center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  justify-content: space-between;
+
+  img {
+    object-fit:scale-down;
+    max-width:100%;
+  }
+
+  .card__info-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 30px;
+  }
+
+  .card__text {
+    font-size: 12px;
+  }
+
+  .card__info-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .card__basket {
+    background-color: $mainColor;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    font-weight: 600;
+  }
+
+  .price span:first-child {
+    margin-right: 5px;
+  }
+}
