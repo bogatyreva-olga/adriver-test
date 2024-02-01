@@ -1,12 +1,23 @@
 @media (max-width: 540px) and (max-height: 400px) {
   .banner {
     height: 388px;
+    margin: 5px;
   }
+
   .banner__logo {
     width: 30%
   }
 
+  .banner__content {
+    padding: 10px;
+  }
+
   .card {
     height: 300px;
+  }
+
+  .card__basket {
+    padding: 4px 10px;
+    font-weight: 600;
   }
 }

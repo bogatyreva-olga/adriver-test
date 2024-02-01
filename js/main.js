@@ -20,7 +20,7 @@ let goods = [
 ];
 
 function numberWithSpace(x) {
-    return x.toString().replace(/\B(?=(\d{3}) + (?!\d))/g, " ");
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         img.alt = item.title;
         cardElement.querySelector(".card__images div").appendChild(img);
         cardElement.querySelector(".price span").innerText = numberWithSpace(item.price);
-        console.log( numberWithSpace(item.price))
+        console.log(typeof numberWithSpace(item.price))
         cardElement.querySelector(".card__text").textContent = item.title;
         let bannerContents = document.querySelector(".banner__content");
         bannerContents.appendChild(cardElement);
