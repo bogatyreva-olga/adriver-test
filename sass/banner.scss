@@ -1,4 +1,5 @@
 $mainColor: #816D5E;
+
 body {
   margin: 0;
   padding: 0;
@@ -6,6 +7,46 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+.banner__logo-start {
+  height: 100%;
+  position: relative;
+  margin: 0 10px;
+  opacity: 0;
+}
+
+.banner__logo-start img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.logo-show {
+  animation: show 3s ease 1s, hide 2s ease 3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .content__wrapper {
@@ -28,17 +69,19 @@ button {
 }
 
 .banner-wrap {
+  height: 100%;
   width: 100%;
+}
+
+.hidden {
+  display: none;
 }
 
 .banner__content {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-}
-
-.banner-wrap {
-  height: 100%;
+  position: relative;
 }
 
 .banner__logo {
@@ -84,8 +127,9 @@ button {
   width: 100%;
   display: flex;
   justify-content: space-between;
+
   button {
-    width: 40px;
+    width: 25px;
     height: 25px;
     border: none;
     background: darkgrey;
@@ -102,17 +146,6 @@ button {
   left: 0;
 }
 
-.button-prev:before {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-top: 25px solid white;
-  border-left: 18px solid transparent;
-  right: 0;
-  top: 0;
-}
-
 .button-next:after {
   content: "";
   position: absolute;
@@ -122,15 +155,20 @@ button {
   top: 5px;
 }
 
-.button-next:before {
+.banner__button-navigation:after {
   content: "";
   position: absolute;
-  width: 0;
-  height: 0;
-  border-top: 25px solid white;
+  border-bottom: 25px solid darkgrey;
+  border-left: 18px solid transparent;
+  right: 25px;
+}
+
+.banner__button-navigation:before {
+  content: "";
+  position: absolute;
+  border-bottom: 25px solid darkgrey;
   border-right: 18px solid transparent;
-  top: 0;
-  left: 0;
+  left: 25px;
 }
 
 .card {

@@ -8,7 +8,7 @@ let goods = [
     {
         'id': 2,
         'image': 'image/2.jpg',
-        'title': 'Футболка базовая Футболка базовая Футболка',
+        'title': 'Футболка базовая',
         'price': 2980
     },
     {
@@ -43,6 +43,17 @@ let goods = [
     },
 ];
 
+function showLogo() {
+    let content = document.querySelector(".banner__wrap");
+    let startElement = document.querySelector(".banner__logo-start");
+    setTimeout(() => {
+        startElement.style.display = "none"
+    }, 3000 );
+    setTimeout(() => {
+        content.classList.remove("hidden")
+    }, 3500 );
+}
+
 function numberWithSpace(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 }
@@ -66,4 +77,5 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let i = 0; i < goods.length; i++) {
         createCardElement(goods[i]);
     }
+    showLogo();
 })
