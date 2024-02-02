@@ -11,6 +11,7 @@ body {
 .content__wrapper {
   display: flex;
   gap: 50px;
+  justify-content: center;
 }
 
 button {
@@ -21,8 +22,8 @@ button {
 .banner {
   font-family: 'Rubik', sans-serif;
   color: $mainColor;
-  font-weight: bold;
   border: 0.75px solid #2d2d2d;
+  overflow: hidden;
 }
 
 .banner-wrap {
@@ -44,19 +45,37 @@ button {
   margin: 20px auto;
 }
 
-.banner__popup-info {
+.banner__popup-button-wrap {
   position: relative;
   height: 1px;
 }
 
 .banner__button-popup {
   position: absolute;
-  top: -20;
   right: 0;
   width: 25px;
   height: 25px;
   border: none;
   background: url("icons/info-circle.svg"), no-repeat, center, center;
+  z-index: 10;
+}
+
+.banner__popup-info {
+  position: absolute;
+  top: 0;
+  font-size: 10px;
+  color: #000000;
+  border-bottom: 0.75px solid black;
+  padding: 15px 20px 15px 5px;
+  font-weight: 300;
+  z-index: 5;
+  background-color: white;
+  display: none;
+}
+
+.banner__button-popup:hover + .banner__popup-info,
+.banner__button-popup:focus + .banner__popup-info {
+  display: block;
 }
 
 .card {
@@ -66,8 +85,8 @@ button {
   justify-content: space-between;
 
   img {
-    object-fit:scale-down;
-    max-width:100%;
+    object-fit: scale-down;
+    max-width: 100%;
   }
 
   .card__info-product {
@@ -81,6 +100,7 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    font-weight: bold;
   }
 
   .card__basket {
@@ -88,10 +108,14 @@ button {
     border: none;
     color: white;
     text-transform: uppercase;
+  }
 
+  .card__basket:hover {
+    background-color: #af9e93;
   }
 
   .price span:first-child {
     margin-right: 5px;
   }
 }
+
