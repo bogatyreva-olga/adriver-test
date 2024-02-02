@@ -1,5 +1,37 @@
-@media (max-width: 240px) and (max-width: 240px) and (max-height: 415px) and (min-height: 385px) {
+@media (min-width: 235px) and (max-width: 255px) and (max-height: 400px) {
   .card {
-    min-width: 210px;
+    min-width: 215px;
+  }
+
+  .card__basket {
+    font-weight: bold;
+    padding: 5px 15px;
+
+    span {
+      letter-spacing: 1px;
+    }
+  }
+
+  .card__info-product {
+    gap: 15px;
+    padding: 0 5px;
+  }
+
+  .card__text {
+    font-size: 12px;
+  }
+
+  .banner__content {
+    padding: 7px;
+  }
+
+  .banner {
+    height: 388px;
+    margin: 5px;
+  }
+
+  .banner__logo {
+    width: 75%;
+    margin: 20px auto;
   }
 }

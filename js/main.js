@@ -47,38 +47,6 @@ function numberWithSpace(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 }
 
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-
-
-    // Navigation arrows
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-        el: '.swiper-scrollbar',
-    },
-    breakpoints: {
-        540: {
-            slidesPerView: 3,
-            spaceBetween: 20
-        },
-        120: {
-            slidesPerView: 1,
-            spaceBetween: 20
-        },
-        240: {
-            slidesPerView: 3,
-            spaceBetween: 20
-        }
-    }
-});
-
 document.addEventListener("DOMContentLoaded", function () {
     const createCardElement = (item) => {
 
@@ -91,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
         cardElement.querySelector(".card__images div").appendChild(img);
         cardElement.querySelector(".price span").innerText = numberWithSpace(item.price);
         cardElement.querySelector(".card__text").textContent = item.title;
-        let bannerContents = document.querySelector("#banner-content");
+        let bannerContents = document.querySelector(".banner__content");
         bannerContents.appendChild(cardElement);
         return bannerContents;
     }

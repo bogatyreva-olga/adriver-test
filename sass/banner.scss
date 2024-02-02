@@ -24,6 +24,7 @@ button {
   color: $mainColor;
   border: 0.75px solid #2d2d2d;
   overflow: hidden;
+  position: relative;
 }
 
 .banner-wrap {
@@ -78,6 +79,60 @@ button {
   display: block;
 }
 
+.banner__button-navigation {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  button {
+    width: 40px;
+    height: 25px;
+    border: none;
+    background: darkgrey;
+    position: relative;
+  }
+}
+
+.button-prev:after {
+  content: "";
+  position: absolute;
+  border: 8px solid transparent;
+  border-right: 6px solid white;
+  top: 5px;
+  left: 0;
+}
+
+.button-prev:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 25px solid white;
+  border-left: 18px solid transparent;
+  right: 0;
+  top: 0;
+}
+
+.button-next:after {
+  content: "";
+  position: absolute;
+  border: 8px solid transparent;
+  border-left: 6px solid white;
+  right: 0;
+  top: 5px;
+}
+
+.button-next:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 25px solid white;
+  border-right: 18px solid transparent;
+  top: 0;
+  left: 0;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -93,7 +148,6 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    gap: 30px;
   }
 
   .card__info-footer {
