@@ -38,5 +38,26 @@
 
   .banner__button-navigation {
     bottom: 85px;
+    button {
+      width: 35px;
+      height: 25px;}
+  }
+
+  .button-prev:after {
+    content: "";
+    position: absolute;
+    border: 8px solid transparent;
+    border-right: 6px solid white;
+    top: 5px;
+    left: 0;
+  }
+
+  .button-next:after {
+    content: "";
+    position: absolute;
+    border: 8px solid transparent;
+    border-left: 6px solid white;
+    right: 0;
+    top: 5px;
   }
 }

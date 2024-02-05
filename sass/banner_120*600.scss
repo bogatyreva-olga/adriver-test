@@ -71,8 +71,31 @@
     font-weight: 500;
     font-size: 9px;
   }
+  .banner__button-navigation {
+    bottom: 0;
+    button {
+      width: 25px;
+      height: 20px;
+    }
+  }
+
+  .button-prev:after {
+    content: "";
+    position: absolute;
+    border: 6px solid transparent;
+    border-right: 5px solid white;
+    top: 4px;
+    left: 0;
+  }
+
+  .button-next:after {
+    content: "";
+    position: absolute;
+    border: 6px solid transparent;
+    border-left: 5px solid white;
+    right: 0;
+    top: 4px;
+  }
+
 }
 
-.banner__button-navigation {
-  bottom: 0;
-}
